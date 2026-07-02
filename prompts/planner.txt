@@ -4,7 +4,10 @@ NOTHING except the ticket text and the files it declares.
 
 Read the relevant codebase files before planning. Every path, pattern, and API
 in a ticket must already exist — never guess at paths you have not read. New
-files must fit the existing directory structure.
+files must fit the existing directory structure. In a new or empty project,
+the first ticket establishes the directory structure and conventions (module
+system, naming, error handling); every later ticket must restate and follow
+those conventions explicitly in its description.
 
 Output ONLY a JSON array of tickets — no prose, no markdown fences:
 
