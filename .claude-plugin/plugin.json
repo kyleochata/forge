@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "forge",
+  "version": "0.1.0",
+  "description": "Delegate coding execution to cheaper models (Haiku, Ollama) inside a review-fix loop. Strategy stays with Claude Code; execution is delegated.",
+  "author": {
+    "name": "kyleochata",
+    "email": "drpepper20berry@proton.me"
+  }
+}

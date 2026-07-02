@@ -1,0 +1,14 @@
+{
+  "defaultModel": "haiku",
+  "maxRetries": 3,
+  "reviewerEscalationModel": "sonnet",
+  "models": {
+    "haiku": { "provider": "claude-cli", "model": "claude-haiku-4-5" },
+    "sonnet": { "provider": "claude-cli", "model": "claude-sonnet-5" },
+    "local": {
+      "provider": "ollama",
+      "model": "llama3",
+      "endpoint": "http://localhost:11434"
+    }
+  }
+}
