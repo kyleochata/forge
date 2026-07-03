@@ -1,0 +1,8 @@
+{
+  "id": "feature-csv-parse",
+  "category": "feature",
+  "difficulty": "medium",
+  "files": ["csv.js"],
+  "checker": "node check.js",
+  "prompt": "parseLine breaks on quoted CSV fields. Add RFC-4180-style support: a field may be wrapped in double quotes; a quoted field may contain commas; a doubled double-quote inside a quoted field is a literal double-quote. Behavior for plain unquoted lines must not change."
+}

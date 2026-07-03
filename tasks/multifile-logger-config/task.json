@@ -1,0 +1,8 @@
+{
+  "id": "multifile-logger-config",
+  "category": "multifile",
+  "difficulty": "medium",
+  "files": ["config.js", "logger.js"],
+  "checker": "node check.js",
+  "prompt": "logger.js hardcodes its prefix and ignores config.level entirely. Wire it to config.js: use config.prefix for the prefix, and make log(level, message) return null for messages below the configured level (severity order: debug < info < warn < error; config.level is currently 'info'). Messages at or above the level keep today's format '<prefix> <level>: <message>'."
+}

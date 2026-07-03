@@ -1,0 +1,266 @@
+{
+  "generatedAt": "2026-07-03T19:42:36.262Z",
+  "model": "haiku",
+  "reps": 1,
+  "totals": {
+    "direct": {
+      "runs": 6,
+      "passes": 6,
+      "passRate": 1,
+      "avgDurationMs": 8473,
+      "totalInputTokens": 54,
+      "totalOutputTokens": 6311,
+      "totalCostUsd": 0.0924
+    },
+    "forge": {
+      "runs": 6,
+      "passes": 6,
+      "passRate": 1,
+      "avgDurationMs": 51764,
+      "totalInputTokens": 72,
+      "totalOutputTokens": 11569,
+      "totalCostUsd": 0.1446
+    }
+  },
+  "delta": 0,
+  "byCategory": {
+    "bugfix": {
+      "direct": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 7846,
+        "totalInputTokens": 9,
+        "totalOutputTokens": 1158,
+        "totalCostUsd": 0.0161
+      },
+      "forge": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 35107,
+        "totalInputTokens": 18,
+        "totalOutputTokens": 2448,
+        "totalCostUsd": 0.0334
+      },
+      "delta": 0
+    },
+    "feature": {
+      "direct": {
+        "runs": 2,
+        "passes": 2,
+        "passRate": 1,
+        "avgDurationMs": 8687,
+        "totalInputTokens": 18,
+        "totalOutputTokens": 2052,
+        "totalCostUsd": 0.0303
+      },
+      "forge": {
+        "runs": 2,
+        "passes": 2,
+        "passRate": 1,
+        "avgDurationMs": 45042,
+        "totalInputTokens": 18,
+        "totalOutputTokens": 3547,
+        "totalCostUsd": 0.038
+      },
+      "delta": 0
+    },
+    "multifile": {
+      "direct": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 5874,
+        "totalInputTokens": 9,
+        "totalOutputTokens": 776,
+        "totalCostUsd": 0.0141
+      },
+      "forge": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 74008,
+        "totalInputTokens": 18,
+        "totalOutputTokens": 3013,
+        "totalCostUsd": 0.0359
+      },
+      "delta": 0
+    },
+    "refactor": {
+      "direct": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 7520,
+        "totalInputTokens": 9,
+        "totalOutputTokens": 1133,
+        "totalCostUsd": 0.0162
+      },
+      "forge": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 34082,
+        "totalInputTokens": 9,
+        "totalOutputTokens": 1199,
+        "totalCostUsd": 0.0167
+      },
+      "delta": 0
+    },
+    "underspec": {
+      "direct": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 12223,
+        "totalInputTokens": 9,
+        "totalOutputTokens": 1192,
+        "totalCostUsd": 0.0157
+      },
+      "forge": {
+        "runs": 1,
+        "passes": 1,
+        "passRate": 1,
+        "avgDurationMs": 77300,
+        "totalInputTokens": 9,
+        "totalOutputTokens": 1362,
+        "totalCostUsd": 0.0207
+      },
+      "delta": 0
+    }
+  },
+  "byDifficulty": {
+    "easy": {
+      "direct": {
+        "runs": 4,
+        "passes": 4,
+        "passRate": 1,
+        "avgDurationMs": 8581,
+        "totalInputTokens": 36,
+        "totalOutputTokens": 4048,
+        "totalCostUsd": 0.0608
+      },
+      "forge": {
+        "runs": 4,
+        "passes": 4,
+        "passRate": 1,
+        "avgDurationMs": 41941,
+        "totalInputTokens": 45,
+        "totalOutputTokens": 5562,
+        "totalCostUsd": 0.0835
+      },
+      "delta": 0
+    },
+    "medium": {
+      "direct": {
+        "runs": 2,
+        "passes": 2,
+        "passRate": 1,
+        "avgDurationMs": 8256,
+        "totalInputTokens": 18,
+        "totalOutputTokens": 2263,
+        "totalCostUsd": 0.0317
+      },
+      "forge": {
+        "runs": 2,
+        "passes": 2,
+        "passRate": 1,
+        "avgDurationMs": 71408,
+        "totalInputTokens": 27,
+        "totalOutputTokens": 6007,
+        "totalCostUsd": 0.0611
+      },
+      "delta": 0
+    }
+  },
+  "byTask": [
+    {
+      "task": "bugfix-off-by-one",
+      "category": "bugfix",
+      "difficulty": "easy",
+      "direct": {
+        "passes": 1,
+        "runs": 1
+      },
+      "forge": {
+        "passes": 1,
+        "runs": 1
+      }
+    },
+    {
+      "task": "feature-cli-json",
+      "category": "feature",
+      "difficulty": "easy",
+      "direct": {
+        "passes": 1,
+        "runs": 1
+      },
+      "forge": {
+        "passes": 1,
+        "runs": 1
+      }
+    },
+    {
+      "task": "feature-lru",
+      "category": "feature",
+      "difficulty": "medium",
+      "direct": {
+        "passes": 1,
+        "runs": 1
+      },
+      "forge": {
+        "passes": 1,
+        "runs": 1
+      }
+    },
+    {
+      "task": "multifile-split-utils",
+      "category": "multifile",
+      "difficulty": "medium",
+      "direct": {
+        "passes": 1,
+        "runs": 1
+      },
+      "forge": {
+        "passes": 1,
+        "runs": 1
+      }
+    },
+    {
+      "task": "refactor-extract-validate",
+      "category": "refactor",
+      "difficulty": "easy",
+      "direct": {
+        "passes": 1,
+        "runs": 1
+      },
+      "forge": {
+        "passes": 1,
+        "runs": 1
+      }
+    },
+    {
+      "task": "underspec-email",
+      "category": "underspec",
+      "difficulty": "easy",
+      "direct": {
+        "passes": 1,
+        "runs": 1
+      },
+      "forge": {
+        "passes": 1,
+        "runs": 1
+      }
+    }
+  ],
+  "variance": {
+    "tasksWithMixedResults": [],
+    "note": "Tasks listed here passed on some repetitions and failed on others in the same arm; treat their per-task deltas as noise."
+  },
+  "armErrors": {
+    "direct": 0,
+    "forge": 0
+  },
+  "regressions": null
+}

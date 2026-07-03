@@ -1,0 +1,8 @@
+{
+  "id": "bugfix-deep-get",
+  "category": "bugfix",
+  "difficulty": "hard",
+  "files": ["get.js"],
+  "checker": "node check.js",
+  "prompt": "deepGet(obj, path, fallback) throws when the dotted path crosses a null value, and it must preserve legitimate falsy leaf values. Expected: deepGet({a:{b:null}}, 'a.b.c', 'X') returns 'X' without crashing; deepGet({a:null}, 'a', 'X') returns null (null IS the stored value); deepGet({a:0}, 'a', 'X') returns 0; deepGet({a:{b:{c:5}}}, 'a.b.c', 'X') returns 5; any missing path returns the fallback. Fix it."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "multifile-validators",
+  "category": "multifile",
+  "difficulty": "medium",
+  "files": ["form.js"],
+  "checker": "node check.js",
+  "prompt": "Move the field checks out of form.js into a new file validators.js exporting isEmail(value) (true for a string containing '@') and isRequired(value) (true for a string with non-whitespace content). form.js must require('./validators.js') and use them. The values submit returns must not change."
+}

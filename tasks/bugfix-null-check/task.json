@@ -1,0 +1,8 @@
+{
+  "id": "bugfix-null-check",
+  "category": "bugfix",
+  "difficulty": "easy",
+  "files": ["user.js"],
+  "checker": "node check.js",
+  "prompt": "displayName crashes for users without a profile and produces 'undefined' for missing name fields. Expected behavior: no profile, or a profile with no name fields, returns 'anonymous'; only firstName 'Ada' returns 'Ada'; only lastName 'Lovelace' returns 'Lovelace'; both returns 'Ada Lovelace' (single space, no leading/trailing whitespace). Fix it."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "feature-lru",
+  "category": "feature",
+  "difficulty": "medium",
+  "files": ["lru.js"],
+  "checker": "node check.js",
+  "prompt": "Implement the LRUCache class in lru.js: fixed capacity set in the constructor; get(key) returns the stored value or -1 when absent; put(key, value) inserts or updates; when an insert would exceed capacity, evict the least-recently-used entry first. Both get and put count as a use of that key."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "underspec-robust-parse",
+  "category": "underspec",
+  "difficulty": "hard",
+  "files": ["parse.js"],
+  "checker": "node check.js",
+  "prompt": "The importer keeps crashing on bad files. parseData shouldn't take down the app when the input is malformed."
+}

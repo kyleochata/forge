@@ -1,0 +1,8 @@
+{
+  "id": "underspec-money",
+  "category": "underspec",
+  "difficulty": "medium",
+  "files": ["price.js"],
+  "checker": "node check.js",
+  "prompt": "Prices in our US storefront display inconsistently — customers see things like '2.5' and '3' in the cart. Make formatPrice display prices properly."
+}

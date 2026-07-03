@@ -1,0 +1,8 @@
+{
+  "id": "multifile-http-health",
+  "category": "multifile",
+  "difficulty": "hard",
+  "files": ["server.js", "routes.js"],
+  "checker": "node check.js",
+  "prompt": "Add a GET /health endpoint returning HTTP 200 with the JSON body {\"status\":\"ok\"} and content-type application/json. Register it in routes.js following the existing routes pattern — do not special-case it inside server.js."
+}

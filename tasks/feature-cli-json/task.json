@@ -1,0 +1,8 @@
+{
+  "id": "feature-cli-json",
+  "category": "feature",
+  "difficulty": "easy",
+  "files": ["cli.js"],
+  "checker": "node check.js",
+  "prompt": "cli.js prints 'key: value' lines. Add support for a --json flag (node cli.js --json) that instead prints the info object as a single line of JSON. Without the flag the output must stay exactly the same as today."
+}

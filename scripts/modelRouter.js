@@ -46,6 +46,14 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function logUsage(record) {
+  const file = process.env.FORGE_USAGE_LOG;
+  if (!file) return;
+  try {
+    fs.appendFileSync(file, JSON.stringify({ ts: new Date().toISOString(), ...record }) + '\n');
+  } catch { /* usage logging must never break a model call */ }
+}
+
 // --- provider: claude-cli ---------------------------------------------------
 
 function callClaudeCli(entry, { system, prompt, timeoutMs }) {
@@ -97,6 +105,14 @@ function callClaudeCli(entry, { system, prompt, timeoutMs }) {
         reject(new Error(`claude -p (${entry.model}) reported an error: ${String(parsed.result).slice(0, 500)}`));
         return;
       }
+      logUsage({
+        provider: 'claude-cli',
+        model: entry.model,
+        inputTokens: parsed.usage ? (parsed.usage.input_tokens ?? null) : null,
+        outputTokens: parsed.usage ? (parsed.usage.output_tokens ?? null) : null,
+        costUsd: parsed.total_cost_usd ?? null,
+        durationMs: parsed.duration_ms ?? null,
+      });
       resolve(String(parsed.result ?? ''));
     });
 
@@ -140,6 +156,14 @@ async function callOllama(entry, { system, prompt, timeoutMs }) {
   if (typeof data.response !== 'string') {
     throw new Error(`Ollama response for model "${entry.model}" had no "response" field: ${JSON.stringify(data).slice(0, 300)}`);
   }
+  logUsage({
+    provider: 'ollama',
+    model: entry.model,
+    inputTokens: data.prompt_eval_count ?? null,
+    outputTokens: data.eval_count ?? null,
+    costUsd: null,
+    durationMs: data.total_duration ? Math.round(data.total_duration / 1e6) : null,
+  });
   return data.response;
 }
 

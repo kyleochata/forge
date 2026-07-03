@@ -1,0 +1,8 @@
+{
+  "id": "refactor-dedupe-format",
+  "category": "refactor",
+  "difficulty": "medium",
+  "files": ["format.js"],
+  "checker": "node check.js",
+  "prompt": "formatUser and formatProduct duplicate the same truncation and layout logic. Extract a shared helper formatEntity(label, name, id) that both delegate to, and export all three functions. Every output string must stay byte-identical to today's output."
+}

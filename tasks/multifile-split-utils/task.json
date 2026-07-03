@@ -1,0 +1,8 @@
+{
+  "id": "multifile-split-utils",
+  "category": "multifile",
+  "difficulty": "medium",
+  "files": ["utils.js"],
+  "checker": "node check.js",
+  "prompt": "Split utils.js by concern: move the string helpers (capitalize, titleCase) into a new stringUtils.js and the number helpers (clamp, sum) into a new numberUtils.js. utils.js must keep exporting all four functions (re-export from the new files) so existing require('./utils.js') callers keep working unchanged."
+}

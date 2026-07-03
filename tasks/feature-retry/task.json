@@ -1,0 +1,8 @@
+{
+  "id": "feature-retry",
+  "category": "feature",
+  "difficulty": "medium",
+  "files": ["retry.js"],
+  "checker": "node check.js",
+  "prompt": "Implement retry(fn, attempts, baseDelayMs) in retry.js: call the async function fn; on rejection retry until fn has been called `attempts` times in total, waiting baseDelayMs before the first retry and doubling the wait before each subsequent retry; resolve with fn's value on the first success; if every attempt fails, reject with the last error."
+}

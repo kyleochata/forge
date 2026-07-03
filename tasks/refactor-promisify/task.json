@@ -1,0 +1,8 @@
+{
+  "id": "refactor-promisify",
+  "category": "refactor",
+  "difficulty": "medium",
+  "files": ["config.js"],
+  "checker": "node check.js",
+  "prompt": "Convert readConfig from callback style to promise style: readConfig() takes NO arguments and returns a Promise that resolves to the same config object it passes to the callback today. Keep the export name readConfig. Callers using callbacks will be migrated separately."
+}

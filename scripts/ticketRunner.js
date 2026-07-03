@@ -12,6 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { callModel, loadConfig } = require('./modelRouter');
 const { verifyImports } = require('./preToolUse');
+const { extractJsonObject } = require('./jsonExtract');
 
 const PROMPTS_DIR = path.join(__dirname, '..', 'prompts');
 
@@ -63,16 +64,6 @@ function loadTickets(file) {
   return tickets;
 }
 
-// Extract a JSON object from model output that may be wrapped in markdown
-// fences or prose.
-function parseJsonLoose(text) {
-  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/);
-  const candidate = fenced ? fenced[1] : text;
-  const start = candidate.indexOf('{');
-  const end = candidate.lastIndexOf('}');
-  if (start === -1 || end <= start) throw new Error('no JSON object found in model output');
-  return JSON.parse(candidate.slice(start, end + 1));
-}
 
 function safeResolve(cwd, rel) {
   const abs = path.resolve(cwd, rel);
@@ -184,7 +175,7 @@ async function runTicket({ cwd, ticket, index, total, modelAlias, config, config
 
       let parsed;
       try {
-        parsed = parseJsonLoose(exec.text);
+        parsed = extractJsonObject(exec.text);
       } catch (err) {
         record.result = 'FAIL';
         record.issues = [`Executor output was not valid JSON (${err.message}). Respond with only the JSON object described in your instructions.`];
@@ -212,7 +203,7 @@ async function runTicket({ cwd, ticket, index, total, modelAlias, config, config
 
       let verdict;
       try {
-        verdict = parseJsonLoose(review.text);
+        verdict = extractJsonObject(review.text);
       } catch (err) {
         verdict = { verdict: 'FAIL', issues: [`Reviewer output was not valid JSON (${err.message}).`] };
       }
@@ -306,4 +297,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { parseJsonLoose, deterministicIssues, loadTickets };
+module.exports = { deterministicIssues, loadTickets };

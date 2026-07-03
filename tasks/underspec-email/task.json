@@ -1,0 +1,8 @@
+{
+  "id": "underspec-email",
+  "category": "underspec",
+  "difficulty": "easy",
+  "files": ["signup.js"],
+  "checker": "node check.js",
+  "prompt": "Users keep signing up with junk email addresses and support is drowning in bounced mail. Add email validation to signup."
+}

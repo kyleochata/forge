@@ -1,0 +1,8 @@
+{
+  "id": "refactor-extract-validate",
+  "category": "refactor",
+  "difficulty": "easy",
+  "files": ["handlers.js"],
+  "checker": "node check.js",
+  "prompt": "createUser and updateUser duplicate identical validation. Extract it into a single validateInput(input) function used by both, and export validateInput alongside them. validateInput returns the same { error: ... } object the handlers currently return for bad input, and null for valid input. The observable behavior of createUser and updateUser must not change at all."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "bugfix-slugify",
+  "category": "bugfix",
+  "difficulty": "medium",
+  "files": ["slugify.js"],
+  "checker": "node check.js",
+  "prompt": "slugify only replaces the first space and leaves punctuation in. Wanted: lowercase the input; every run of characters that are not a-z or 0-9 becomes a single '-'; no leading or trailing '-'. Examples: 'Hello World Again!' -> 'hello-world-again'; '  Rock & Roll  ' -> 'rock-roll'. Fix it."
+}

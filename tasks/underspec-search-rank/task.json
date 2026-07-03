@@ -1,0 +1,8 @@
+{
+  "id": "underspec-search-rank",
+  "category": "underspec",
+  "difficulty": "medium",
+  "files": ["search.js"],
+  "checker": "node check.js",
+  "prompt": "Users complain that search results look random. Best matches should show up first."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "feature-stats",
+  "category": "feature",
+  "difficulty": "easy",
+  "files": ["counter.js"],
+  "checker": "node check.js",
+  "prompt": "Add a stats() export to counter.js returning { count, min, max, mean } over everything record()ed so far. With no values recorded yet it returns { count: 0, min: null, max: null, mean: null }. Keep record and total working unchanged."
+}

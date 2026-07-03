@@ -1,0 +1,8 @@
+{
+  "id": "bugfix-async-loop",
+  "category": "bugfix",
+  "difficulty": "medium",
+  "files": ["jobs.js"],
+  "checker": "node check.js",
+  "prompt": "runAll returns before any job finishes, so callers always get an empty array. It must resolve with every job's result, in the same order as the jobs array, even when jobs finish out of order. Fix it."
+}

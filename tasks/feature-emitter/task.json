@@ -1,0 +1,8 @@
+{
+  "id": "feature-emitter",
+  "category": "feature",
+  "difficulty": "hard",
+  "files": ["emitter.js"],
+  "checker": "node check.js",
+  "prompt": "Implement the Emitter class in emitter.js: on(event, fn) registers a handler; once(event, fn) registers a handler that removes itself after its first invocation; off(event, fn) removes that specific handler; emit(event, ...args) calls the event's handlers in registration order, passing the args, and returns the number of handlers invoked (0 for events with no handlers)."
+}

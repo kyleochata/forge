@@ -1,0 +1,8 @@
+{
+  "id": "bugfix-mutation",
+  "category": "bugfix",
+  "difficulty": "medium",
+  "files": ["sort.js"],
+  "checker": "node check.js",
+  "prompt": "sortByAge reorders the array callers pass in, corrupting upstream state. It must return a NEW array sorted ascending by age and leave the input array untouched. Fix it."
+}

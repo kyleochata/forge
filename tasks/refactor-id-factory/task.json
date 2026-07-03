@@ -1,0 +1,8 @@
+{
+  "id": "refactor-id-factory",
+  "category": "refactor",
+  "difficulty": "hard",
+  "files": ["ids.js"],
+  "checker": "node check.js",
+  "prompt": "ids.js uses hidden module-level state, so tests cannot get isolated ID sequences. Add createIdGenerator(prefix) — prefix defaults to 'id' — returning a new independent generator function; every generator starts its own count at 1 and produces `<prefix>-<n>`. Keep nextId exported and working exactly as before (it may delegate to a default generator, but calls to other generators must never affect it). Export both nextId and createIdGenerator."
+}
